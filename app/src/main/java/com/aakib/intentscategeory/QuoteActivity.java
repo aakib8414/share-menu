@@ -12,6 +12,7 @@ public class QuoteActivity extends AppCompatActivity {
 
     Button share;
     TextView quote;
+    TextView customFont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class QuoteActivity extends AppCompatActivity {
 
         share = findViewById(R.id.btn_share);
         quote = findViewById(R.id.quote);
+        customFont = findViewById(R.id.tv_custom_font);
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,13 @@ public class QuoteActivity extends AppCompatActivity {
                 sendIntent.setType("text/plain");
                 sendIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                 startActivity(sendIntent);
+            }
+        });
+
+        customFont.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuoteActivity.this, CustomFont.class));
             }
         });
     }
