@@ -1,7 +1,9 @@
 package com.aakib.intentscategeory;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,5 +29,13 @@ public class CustomFont extends AppCompatActivity {
 
         Typeface urduFont = Typeface.createFromAsset(getAssets(),"font/urdu.ttf");
         urdu.setTypeface(urduFont);
+
+        findViewById(R.id.alertDialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CustomFont.this,AlertDialogActivity.class));
+                finish();
+            }
+        });
     }
 }

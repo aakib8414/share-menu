@@ -30,6 +30,7 @@ public class ActivitySecond extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ActivitySecond.this, QuoteActivity.class));
+                finish();
             }
         });
     }

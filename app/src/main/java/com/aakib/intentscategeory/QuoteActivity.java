@@ -41,6 +41,7 @@ public class QuoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(QuoteActivity.this, CustomFont.class));
+                finish();
             }
         });
     }
